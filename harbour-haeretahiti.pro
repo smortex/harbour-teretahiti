@@ -18,6 +18,7 @@ DISTFILES += qml/harbour-haeretahiti.qml \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
     qml/pages/LinesPage.qml \
+    qml/pages/StopsPage.qml \
     rpm/harbour-haeretahiti.changes.in \
     rpm/harbour-haeretahiti.changes.run.in \
     rpm/harbour-haeretahiti.spec \
@@ -35,4 +36,4 @@ CONFIG += sailfishapp_i18n
 # planning to localize your app, remember to comment out the
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
-TRANSLATIONS += translations/harbour-haeretahiti-de.ts
+TRANSLATIONS += translations/harbour-haeretahiti-fr.ts

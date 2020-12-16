@@ -30,4 +30,11 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
+<context>
+    <name>StopsPage</name>
+    <message>
+        <source>Bus Stops</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 </TS>

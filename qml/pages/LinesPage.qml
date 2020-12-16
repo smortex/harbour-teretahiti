@@ -32,6 +32,10 @@ Page {
             width: ListView.view.width
             height: Theme.itemSizeSmall
 
+            onClicked: {
+                pageStack.push(Qt.resolvedUrl("StopsPage.qml"), { teredata: model.stops })
+            }
+
             Rectangle {
                 id: lineno
                 height: parent.height * 0.9
@@ -47,7 +51,7 @@ Page {
 
                     anchors.centerIn: parent
                     font.weight: Font.Bold
-                    font.pixelSize: Theme.fontSizeLarge
+                    font.pixelSize: Theme.fontSizeMedium
                 }
             }
 

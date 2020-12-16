@@ -20,14 +20,21 @@
     </message>
     <message>
         <source>Bus Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Lignes de bus</translation>
     </message>
 </context>
 <context>
     <name>LinesPage</name>
     <message>
         <source>Bus Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Lignes de bus</translation>
+    </message>
+</context>
+<context>
+    <name>StopsPage</name>
+    <message>
+        <source>Bus Stops</source>
+        <translation>Arrêts de bus</translation>
     </message>
 </context>
 </TS>
