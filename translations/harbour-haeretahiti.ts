@@ -2,6 +2,17 @@
 <!DOCTYPE TS>
 <TS version="2.1">
 <context>
+    <name></name>
+    <message id="Map">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="Tset">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CoverPage</name>
     <message>
         <source>My Cover</source>
@@ -9,24 +20,20 @@
     </message>
 </context>
 <context>
-    <name>FirstPage</name>
-    <message>
-        <source>UI Template</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hello Sailors</source>
-        <translation type="unfinished"></translation>
-    </message>
+    <name>LinesPage</name>
     <message>
         <source>Bus Lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Refresh Bus Lines</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>LinesPage</name>
+    <name>NextBusesPage</name>
     <message>
-        <source>Bus Lines</source>
+        <source>Next Buses</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -8,17 +8,23 @@ Name:       harbour-haeretahiti
 # >> macros
 # << macros
 
+%{!?qtc_qmake:%define qtc_qmake %qmake}
+%{!?qtc_qmake5:%define qtc_qmake5 %qmake5}
+%{!?qtc_make:%define qtc_make make}
+%{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Haere Tahiti
 Version:    0.1
 Release:    1
 Group:      Qt/Qt
 License:    LICENSE
-BuildArch:  noarch
 URL:        http://example.org/
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-haeretahiti.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
-Requires:   libsailfishapp-launcher
+Requires:   qt5-plugin-geoservices-osm
+Requires:   qt5-qtlocation >= 5.2.0
+Requires:   qt5-qtdeclarative-import-location >= 5.2.0
+Requires:   qt5-qtdeclarative-import-positioning >= 5.2.0
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.3
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
@@ -39,9 +45,9 @@ Short description of my Sailfish OS Application
 # >> build pre
 # << build pre
 
-%qmake5 
+%qtc_qmake5 
 
-make %{?_smp_mflags}
+%qtc_make %{?_smp_mflags}
 
 # >> build post
 # << build post
@@ -62,6 +68,7 @@ desktop-file-install --delete-original       \
 %files
 %defattr(-,root,root,-)
 %defattr(0644,root,root,-)
+%attr(0755,root,root) %{_bindir}
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png

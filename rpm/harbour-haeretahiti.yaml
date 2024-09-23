@@ -6,7 +6,6 @@ Release: 1
 # https://github.com/mer-tools/spectacle/blob/master/data/GROUPS
 Group: Qt/Qt
 URL: http://example.org/
-BuildArch: noarch
 License: LICENSE
 # This must be generated before uploading a package to a remote build service.
 # Usually this line does not need to be modified.
@@ -14,7 +13,10 @@ Sources:
 - '%{name}-%{version}.tar.bz2'
 Description: |
   Short description of my Sailfish OS Application
-Builder: qmake5
+Configure: none
+# The qtc5 builder inserts macros to allow QtCreator to have fine
+# control over qmake/make execution
+Builder: qtc5
 
 # This section specifies build dependencies that are resolved using pkgconfig.
 # This is the preferred way of specifying build dependencies for your package.
@@ -31,11 +33,15 @@ PkgConfigBR:
 # Runtime dependencies which are not automatically detected
 Requires:
   - sailfishsilica-qt5 >= 0.10.9
-  - libsailfishapp-launcher
+  - qt5-plugin-geoservices-osm
+  - qt5-qtlocation >= 5.2.0
+  - qt5-qtdeclarative-import-location >= 5.2.0
+  - qt5-qtdeclarative-import-positioning >= 5.2.0
 
 # All installed files
 Files:
   - '%defattr(0644,root,root,-)'
+  - '%attr(0755,root,root) %{_bindir}'
   - '%{_datadir}/%{name}'
   - '%{_datadir}/applications/%{name}.desktop'
   - '%{_datadir}/icons/hicolor/*/apps/%{name}.png'

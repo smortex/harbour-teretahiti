@@ -12,28 +12,41 @@
 # The name of your application
 TARGET = harbour-haeretahiti
 
-CONFIG += sailfishapp_qml
+CONFIG += sailfishapp
 
-DISTFILES += qml/harbour-haeretahiti.qml \
+SOURCES += \
+    src/busline.cpp \
+    src/buslinemodel.cpp \
+    src/busstop.cpp \
+    src/busstopmodel.cpp \
+    src/harbour-teretahiti.cpp
+
+OTHER_FILES += \
+    qml/harbour-haeretahiti.qml \
     qml/cover/CoverPage.qml \
-    qml/pages/FirstPage.qml \
-    qml/pages/LinesPage.qml \
-    qml/pages/StopsPage.qml \
-    rpm/harbour-haeretahiti.changes.in \
-    rpm/harbour-haeretahiti.changes.run.in \
-    rpm/harbour-haeretahiti.spec \
-    rpm/harbour-haeretahiti.yaml \
     translations/*.ts \
     harbour-haeretahiti.desktop
 
-SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
-
-# to disable building translations every time, comment out the
-# following CONFIG line
 CONFIG += sailfishapp_i18n
 
-# German translation is enabled as an example. If you aren't
-# planning to localize your app, remember to comment out the
-# following TRANSLATIONS line. And also do not forget to
-# modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/harbour-haeretahiti-fr.ts
+
+DISTFILES += \
+    qml/Marker.qml \
+    qml/pages/LinesPage.qml \
+    qml/pages/MapPage.qml \
+    qml/pages/NextBusesPage.qml \
+    qml/pages/StopsPage.qml \
+    rpm/harbour-haeretahiti.spec \
+    rpm/harbour-haeretahiti.yaml
+
+
+SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
+
+HEADERS += \
+    src/busline.h \
+    src/buslinemodel.h \
+    src/busstop.h \
+    src/busstopmodel.h
+
+QT += positioning location

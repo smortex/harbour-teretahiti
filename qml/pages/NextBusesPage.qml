@@ -4,34 +4,26 @@ import Sailfish.Silica 1.0
 Page {
     id: page
 
+    // The effective value will be restricted by ApplicationWindow.allowedOrientations
+    allowedOrientations: Orientation.All
+
     property variant teredata: []
 
-
     Component.onCompleted: {
-        /*
-        for(var i=0; i < teredata.count; i++) {
-            console.log(i)
-            stops.append(teredata.get(i))
-        }
-        */
-        console.info(teredata)
         teredata.forEach(function(itm) {
-            console.log(itm.departure)
+            console.log(itm.name)
             listView.model.append(itm)
         })
     }
-
-    allowedOrientations: Orientation.All
 
     SilicaListView {
         id: listView
         anchors.fill: parent
         header: PageHeader {
-            title: qsTr("Bus Stops")
+            title: qsTr("Next Buses")
         }
 
         model: ListModel {
-            id: stops
         }
 
         delegate: ListItem {
@@ -41,11 +33,16 @@ Page {
             height: Theme.itemSizeSmall
 
             onClicked: {
-                console.log(model.departure)
+                var data = []
+                for (var prop in model.stopTimes) {
+                    data.push(model.stopTimes[prop])
+                }
+
+                pageStack.push(Qt.resolvedUrl("StopsPage.qml"), { teredata: data })
             }
 
             Label {
-                text: stopInfo.name
+                text: name
 
                 //font.capitalization: Font.Capitalize
 
