@@ -64,17 +64,15 @@ Page {
                     }
                 }
                 req.open('POST', 'http://locbusrtct.dataccessor.com:20082/api/itinerary/running')
-                req.send("{\"routeId\": \"%1\"}".arg(model.id))
-
                 console.info("{\"routeId\": \"%1\"}".arg(model.id))
-                req.send()
+                req.send("{\"routeId\": \"%1\"}".arg(model.id))
             }
 
             function clear(color) {
                 var r = parseInt(color.substring(1,3),16)/255;
                 var g = parseInt(color.substring(3,5),16)/255;
                 var b = parseInt(color.substring(5,7),16)/255;
-console.info(r+g+b)
+//console.info(r+g+b)
                 return r + g + b > 1.5
             }
 

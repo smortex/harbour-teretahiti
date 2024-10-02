@@ -2,6 +2,7 @@
 #define BUSSTOPMODEL_H
 
 #include <QAbstractListModel>
+#include <QJsonObject>
 #include <QObject>
 
 #include "busstop.h"
@@ -24,6 +25,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
     Q_INVOKABLE void update(QString data);
+    Q_INVOKABLE void loadFromJson(QJsonObject data);
 
 private:
     QList<BusStop *>* mEntries;

@@ -13,19 +13,25 @@
 BusStopModel::BusStopModel(QObject *parent) : QAbstractListModel(parent)
 {
     mEntries = new QList<BusStop*>();
-    mCacheFilename = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QDir::separator() + "stops.json";
-    if (QFile::exists(mCacheFilename)) {
-        qDebug() << "Using existing lines cache file";
-        loadFromCache();
 
-    } else {
-        qDebug() << "No cached data";
-        QNetworkAccessManager *manager = new QNetworkAccessManager(this);
-        connect(manager, SIGNAL(finished(QNetworkReply*)),
-                this, SLOT(replyFinished(QNetworkReply*)));
+//    if (!data.isEmpty()) {
+//        mEntries->append(new BusStop(this, 12, "Test", 0, 0));
+//        return;
+//    }
 
-        manager->get(QNetworkRequest(QUrl("http://locbusrtct.dataccessor.com:20082/api/places/all")));
-    }
+//    mCacheFilename = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QDir::separator() + "stops.json";
+//    if (QFile::exists(mCacheFilename)) {
+//        qDebug() << "Using existing lines cache file";
+//        loadFromCache();
+
+//    } else {
+//        qDebug() << "No cached data";
+//        QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+//        connect(manager, SIGNAL(finished(QNetworkReply*)),
+//                this, SLOT(replyFinished(QNetworkReply*)));
+
+//        manager->get(QNetworkRequest(QUrl("http://locbusrtct.dataccessor.com:20082/api/places/all")));
+//    }
 }
 
 QVariant BusStopModel::data(const QModelIndex &index, int role) const
@@ -70,6 +76,10 @@ void BusStopModel::update(QString data)
     }
 
     loadFromCache();
+}
+
+void BusStopModel::loadFromJson(QJsonObject data)
+{
 }
 
 void BusStopModel::loadFromCache()

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.15.2, 2024-09-23T17:48:31. -->
+<!-- Written by QtCreator 4.15.2, 2024-10-01T16:07:26. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -8,7 +8,7 @@
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
-  <value type="int">1</value>
+  <value type="int">0</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.EditorSettings</variable>
@@ -83,15 +83,18 @@
     <valuelist type="QVariantList" key="ClangTools.SuppressedDiagnostics"/>
     <value type="bool" key="ClangTools.UseGlobalSettings">true</value>
    </valuemap>
+   <valuemap type="QVariantMap" key="CppEditor.QuickFix">
+    <value type="bool" key="UseGlobalSettings">true</value>
+   </valuemap>
   </valuemap>
  </data>
  <data>
   <variable>ProjectExplorer.Project.Target.0</variable>
   <valuemap type="QVariantMap">
    <value type="QString" key="DeviceType">Mer.Device.Type</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">SailfishOS-4.6.0.13-aarch64 (in Sailfish SDK Build Engine)</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">SailfishOS-4.6.0.13-aarch64 (in Sailfish SDK Build Engine)</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">SailfishOS-4.6.0.13-aarch64.default</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">SailfishOS-4.6.0.13-armv7hl (in Sailfish SDK Build Engine)</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">SailfishOS-4.6.0.13-armv7hl (in Sailfish SDK Build Engine)</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">SailfishOS-4.6.0.13-armv7hl.default</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
@@ -102,8 +105,8 @@
     <value type="QString" key="MerBuildConfiguration.SigningUser">Romain Tartière &lt;romain@blogreen.org&gt; [82349A78E7C0B8070B5980FFBA4D1D955112336F]</value>
     <value type="QString" key="MerSfdkConfigurationAspect.Options"></value>
     <value type="QString" key="MerSpecFileAspect.Path"></value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_aarch64_in_Sailfish_SDK_Build_Engine-Debug</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_aarch64_in_Sailfish_SDK_Build_Engine-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_armv7hl_in_Sailfish_SDK_Build_Engine-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_armv7hl_in_Sailfish_SDK_Build_Engine-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -159,8 +162,8 @@
     <value type="QString" key="MerBuildConfiguration.SigningUser">Romain Tartière &lt;romain@blogreen.org&gt; [82349A78E7C0B8070B5980FFBA4D1D955112336F]</value>
     <value type="QString" key="MerSfdkConfigurationAspect.Options"></value>
     <value type="QString" key="MerSpecFileAspect.Path"></value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_aarch64_in_Sailfish_SDK_Build_Engine-Release</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_aarch64_in_Sailfish_SDK_Build_Engine-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_armv7hl_in_Sailfish_SDK_Build_Engine-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_armv7hl_in_Sailfish_SDK_Build_Engine-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -217,8 +220,8 @@
     <value type="QString" key="MerBuildConfiguration.SigningUser">Romain Tartière &lt;romain@blogreen.org&gt; [82349A78E7C0B8070B5980FFBA4D1D955112336F]</value>
     <value type="QString" key="MerSfdkConfigurationAspect.Options"></value>
     <value type="QString" key="MerSpecFileAspect.Path"></value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_aarch64_in_Sailfish_SDK_Build_Engine-Profile</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_aarch64_in_Sailfish_SDK_Build_Engine-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_armv7hl_in_Sailfish_SDK_Build_Engine-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_armv7hl_in_Sailfish_SDK_Build_Engine-Profile</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -428,9 +431,9 @@
   <variable>ProjectExplorer.Project.Target.1</variable>
   <valuemap type="QVariantMap">
    <value type="QString" key="DeviceType">Mer.Device.Type</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">SailfishOS-4.6.0.13-armv7hl (in Sailfish SDK Build Engine)</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">SailfishOS-4.6.0.13-armv7hl (in Sailfish SDK Build Engine)</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">SailfishOS-4.6.0.13-armv7hl.default</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">SailfishOS-4.6.0.13-aarch64 (in Sailfish SDK Build Engine)</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">SailfishOS-4.6.0.13-aarch64 (in Sailfish SDK Build Engine)</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">SailfishOS-4.6.0.13-aarch64.default</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
@@ -441,8 +444,8 @@
     <value type="QString" key="MerBuildConfiguration.SigningUser">Romain Tartière &lt;romain@blogreen.org&gt; [82349A78E7C0B8070B5980FFBA4D1D955112336F]</value>
     <value type="QString" key="MerSfdkConfigurationAspect.Options"></value>
     <value type="QString" key="MerSpecFileAspect.Path"></value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_armv7hl_in_Sailfish_SDK_Build_Engine-Debug</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_armv7hl_in_Sailfish_SDK_Build_Engine-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_aarch64_in_Sailfish_SDK_Build_Engine-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_aarch64_in_Sailfish_SDK_Build_Engine-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -498,8 +501,8 @@
     <value type="QString" key="MerBuildConfiguration.SigningUser">Romain Tartière &lt;romain@blogreen.org&gt; [82349A78E7C0B8070B5980FFBA4D1D955112336F]</value>
     <value type="QString" key="MerSfdkConfigurationAspect.Options"></value>
     <value type="QString" key="MerSpecFileAspect.Path"></value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_armv7hl_in_Sailfish_SDK_Build_Engine-Release</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_armv7hl_in_Sailfish_SDK_Build_Engine-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_aarch64_in_Sailfish_SDK_Build_Engine-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_aarch64_in_Sailfish_SDK_Build_Engine-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -556,8 +559,8 @@
     <value type="QString" key="MerBuildConfiguration.SigningUser">Romain Tartière &lt;romain@blogreen.org&gt; [82349A78E7C0B8070B5980FFBA4D1D955112336F]</value>
     <value type="QString" key="MerSfdkConfigurationAspect.Options"></value>
     <value type="QString" key="MerSpecFileAspect.Path"></value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_armv7hl_in_Sailfish_SDK_Build_Engine-Profile</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_armv7hl_in_Sailfish_SDK_Build_Engine-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_aarch64_in_Sailfish_SDK_Build_Engine-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/romain/Harbour/build-harbour-haeretahiti-SailfishOS_4_6_0_13_aarch64_in_Sailfish_SDK_Build_Engine-Profile</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>

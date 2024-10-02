@@ -1,6 +1,8 @@
 import QtQuick 2.5
 import Sailfish.Silica 1.0
 
+import org.blogreen 1.0
+
 Page {
     id: page
 
@@ -34,11 +36,13 @@ Page {
 
             onClicked: {
                 var data = []
-                for (var prop in model.stopTimes) {
-                    data.push(model.stopTimes[prop])
-                }
+//                for (var prop in model.stopTimes) {
+//                    data.push(model.stopTimes[prop])
+//                }
 
-                pageStack.push(Qt.resolvedUrl("StopsPage.qml"), { teredata: data })
+                console.info(JSON.stringify(model.stopTimes))
+
+                pageStack.push(Qt.resolvedUrl("StopsPage.qml"), { teredata: model.stopTimes })
             }
 
             Label {
