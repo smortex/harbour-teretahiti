@@ -60,6 +60,8 @@ Page {
                 req.onreadystatechange = function() {
                     if (req.readyState === XMLHttpRequest.DONE) {
                         var data = JSON.parse(req.responseText)['data']
+                        console.info(JSON.stringify(data))
+
                         pageStack.push(Qt.resolvedUrl("NextBusesPage.qml"), { teredata: data })
                     }
                 }

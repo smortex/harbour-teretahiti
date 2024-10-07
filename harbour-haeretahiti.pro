@@ -50,3 +50,6 @@ HEADERS += \
     src/busstopmodel.h
 
 QT += positioning location
+
+RESOURCES += \
+  misc.qrc

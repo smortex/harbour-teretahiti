@@ -9,6 +9,11 @@ Page {
     id: page
 
     property variant teredata: []
+    property int current_time: Date.now() / 1000
+
+    function hasAlreadyPassed(model) {
+      return model.departureTimestamp < current_time
+    }
 
     allowedOrientations: Orientation.All
 
@@ -32,7 +37,7 @@ Page {
                 id: delegate
 
                 width: ListView.view.width
-                height: Theme.itemSizeSmall
+                height: Theme.itemSizeMedium
 
                 onClicked: {
                     console.log(model.departure)
@@ -41,13 +46,22 @@ Page {
 
                 }
 
-                Label {
+                Column {
+                  anchors.verticalCenter: parent.verticalCenter
+                  x: Theme.horizontalPageMargin
+
+                  Label {
                     text: stopInfo.name
+                    color: hasAlreadyPassed(model) ? Theme.errorColor : (delegate.highlighted ? Theme.highlightColor : Theme.primaryColor)
 
-                    //font.capitalization: Font.Capitalize
 
-                    anchors.verticalCenter: parent.verticalCenter
-                    x: Theme.horizontalPageMargin
+                }
+                  Label {
+                    text: model.arrival
+                    font.pixelSize: Theme.fontSizeSmall
+                    color: hasAlreadyPassed(model) ? Theme.errorColor : (delegate.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor)
+
+                  }
                 }
             }
 
@@ -67,10 +81,40 @@ Page {
 
             zoomLevel: 11
 
-            MouseArea {
-                anchors.fill: parent
-                preventStealing: true
+            property bool dragging: false
+            property int startX: 0
+            property int startY: 0
 
+            MouseArea {
+              anchors.fill: map
+              preventStealing: true
+              propagateComposedEvents : true
+              /*
+              onPressed: function (mouse) {
+                parent.startX = mouse.x;
+                parent.startY = mouse.y;
+                parent.dragging = true;
+
+              }
+              onReleased: function (mouse) {
+                parent.dragging = false
+              }
+              onMouseXChanged: function (mouse) {
+                if (parent.dragging) {
+                  map.pan(parent.startX - mouse.x, parent.startY - mouse.y)
+                  parent.startX = 0
+                  parent.startY = 0
+                }
+              }
+              onMouseYChanged: function (mouse) {
+                if (parent.dragging) {
+                  map.pan(parent.startX - mouse.x, parent.startY - mouse.y)
+                  parent.startX = 0
+                  parent.startY = 0
+                }
+              }
+              ore
+             */
             }
 
             MapItemView {
@@ -81,6 +125,13 @@ Page {
 
                     anchorPoint.x: marker.width * 0.5
                     anchorPoint.y: marker.height
+
+                    function src(m) {
+                      if (hasAlreadyPassed(m))
+                        return "qrc:///images/marker-expired.png";
+                      else
+                        return "qrc:///images/marker-active.png";
+                    }
 
                     sourceItem: Column {
                         id: marker
@@ -93,7 +144,7 @@ Page {
                         }
                         Image {
                             id: image
-                            source: "https://maps.gstatic.com/mapfiles/ridefinder-images/mm_20_red.png"
+                            source: src(model)
                             anchors.horizontalCenter: parent.horizontalCenter
                         }
                     }

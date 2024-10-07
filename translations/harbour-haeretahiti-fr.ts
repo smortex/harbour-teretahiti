@@ -36,6 +36,14 @@
         <source>Next Buses</source>
         <translation>Prochains bus</translation>
     </message>
+    <message>
+        <source>Fin de service</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Aucun bus proposé</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>StopsPage</name>

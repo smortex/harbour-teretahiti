@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>marker-active.png</file>
+        <file>marker-inactive.png</file>
+        <file>marker-expired.png</file>
+    </qresource>
+</RCC>
