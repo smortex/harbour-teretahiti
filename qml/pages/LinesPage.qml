@@ -108,6 +108,13 @@ Page {
                 anchors.verticalCenter: parent.verticalCenter
             }
         }
+
+        ViewPlaceholder {
+          enabled: listView.count == 0
+          text: qsTr("No bus line known")
+          hintText: qsTr("Pull down to refresh the bus lines")
+        }
+
         VerticalScrollDecorator {}
     }
 }

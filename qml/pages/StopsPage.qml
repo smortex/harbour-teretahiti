@@ -15,15 +15,24 @@ Page {
       return model.departureTimestamp < current_time
     }
 
+    Timer {
+        running: true
+        repeat: true
+        onTriggered: {
+            page.current_time = Date.now() / 1000
+        }
+    }
+
     allowedOrientations: Orientation.All
 
-    Column {
-        anchors.fill: parent
 
         SilicaListView {
             id: listView
-            width: parent.width
-            height: parent.height / 2
+
+            x: 0
+            y: 0
+            width: page.isLandscape ? parent.width / 2 : parent.width
+            height: page.isLandscape ? parent.height : parent.height / 2
 
             header: PageHeader {
                 title: qsTr("Bus Stops")
@@ -75,46 +84,22 @@ Page {
 
         Map {
             id: map
-            width: parent.width
-            height: parent.height / 2
+            x: page.isLandscape ? parent.width / 2 : 0
+            y: page.isLandscape ? 0 : parent.height / 2
+            width: page.isLandscape ? parent.width / 2 : parent.width
+            height: page.isLandscape ? parent.height : parent.height / 2
+
             plugin: mapPlugin
 
             zoomLevel: 11
 
-            property bool dragging: false
-            property int startX: 0
-            property int startY: 0
-
             MouseArea {
-              anchors.fill: map
-              preventStealing: true
-              propagateComposedEvents : true
-              /*
-              onPressed: function (mouse) {
-                parent.startX = mouse.x;
-                parent.startY = mouse.y;
-                parent.dragging = true;
+                anchors.fill: parent
 
-              }
-              onReleased: function (mouse) {
-                parent.dragging = false
-              }
-              onMouseXChanged: function (mouse) {
-                if (parent.dragging) {
-                  map.pan(parent.startX - mouse.x, parent.startY - mouse.y)
-                  parent.startX = 0
-                  parent.startY = 0
+                onPressed: {
+                    // Prevent the page from popping while allowing to move the map.
+                    // (most of the time)
                 }
-              }
-              onMouseYChanged: function (mouse) {
-                if (parent.dragging) {
-                  map.pan(parent.startX - mouse.x, parent.startY - mouse.y)
-                  parent.startX = 0
-                  parent.startY = 0
-                }
-              }
-              ore
-             */
             }
 
             MapItemView {
@@ -152,7 +137,8 @@ Page {
             }
 
         }
-    }
+
+
 
     Timer {
         running: true

@@ -29,6 +29,14 @@
         <source>Refresh Bus Lines</source>
         <translation>Rafraîchir la liste des lignes</translation>
     </message>
+    <message>
+        <source>No bus line known</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pull down to refresh the bus lines</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>NextBusesPage</name>
@@ -49,7 +57,7 @@
     <name>StopsPage</name>
     <message>
         <source>Bus Stops</source>
-        <translation>Arrêts de bus</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
